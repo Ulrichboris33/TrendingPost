@@ -21,7 +21,7 @@ python -m venv nom_de_l_environnement  # Préférez 'venv' ou 'env' ou '.env' ou
 ```
 4. Activer l'environnement virtuel
 
-Naviguez vers le dossier Scripts (Windows) ou bin (Unix) et activez l'environnement:
+Naviguez en fonction du nom de l'environnement vers le dossier Scripts (Windows) ou bin (Unix) et activez l'environnement:
 
 - Pour unix
 ```bash
