@@ -29,12 +29,6 @@ source venv/bin/activate
 ```bash
 .\venv\Scripts\activate
 ```
-5. Installer Django
-
-Assurez-vous que l'environnement est activé, puis installez Django:
-```bash
-pip install django  # Ou spécifiez la version: pip install django==version
-```
 6. Installer les dependances depuis le fichier requirements.txt
 
 Enregistrez les dépendances de votre projet:
