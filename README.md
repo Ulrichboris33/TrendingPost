@@ -1,6 +1,6 @@
 # TrendingPost
 Guide pour excécuter le projet TrendingPost.
-Vous devez demarrer le backend ensuite le Fontend
+Vous devez demarrer le backend ensuite le Fonten
 
 ## Instructions pour le Backend
 Ce guide vous aidera à démarrer le projet Django dans le dossier Backend depuis le début, en configurant un environnement virtuel, en installant Django, et egalement , demarrer le font-end réalisé avec vueJS
