@@ -1,8 +1,10 @@
 # TrendingPost
 Guide pour excécuter le projet TrendingPost.
+Vous devez demarrer le backend ensuite le Fontend
 
 ## Instructions pour le Backend
 Ce guide vous aidera à démarrer le projet Django dans le dossier Backend depuis le début, en configurant un environnement virtuel, en installant Django, et egalement , demarrer le font-end réalisé avec vueJS
+
 1. Cloner le projet
 
 Cloner le projet et ouvrez-le avec votre éditeur de code.
@@ -29,25 +31,20 @@ source venv/bin/activate
 ```bash
 .\venv\Scripts\activate
 ```
-5. Installer Django
 
-Assurez-vous que l'environnement est activé, puis installez Django:
-```bash
-pip install django  # Ou spécifiez la version: pip install django==version
-```
-6. Installer les dependances depuis le fichier requirements.txt
+5. Installer les dependances depuis le fichier requirements.txt
 
 Enregistrez les dépendances de votre projet:
 ```bash
 pip install -r requirements.txt
 ```
-7. Lancer le serveur
+6. Lancer le serveur
 
 Démarrez le serveur de développement:
 ```bash
 python manage.py runserver
 ```
-8. Accédez à l’API :
+7. Accédez à l’API :
 
 Les dépôts GitHub : http://127.0.0.1:8000/api/repositories/
 
@@ -79,7 +76,7 @@ le Frontend sera disponible sur un lien qui vous sera fourni dans le terminal
 •Ajoutez une gestion des erreurs pour des cas comme les limites de taux de
 l'API GitHub ou des problèmes de réseau.
 
-Ajoutez une barre de recherche pour filtrer les dépôts par nom ou
+•Ajoutez une barre de recherche pour filtrer les dépôts par nom ou
 description.
 
 •Ajoutez un style de base pour améliorer l'expérience utilisateur.
