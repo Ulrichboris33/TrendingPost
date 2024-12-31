@@ -30,7 +30,7 @@ def get_repositories(request):
 
     repositories = response.json().get('items', [])
 
-    # Sérialisation des données
+    
     serializer = RepositorySerializer(repositories, many=True)
 
     # Mise en cache des résultats pendant 1 heure
@@ -40,15 +40,15 @@ def get_repositories(request):
 
 @api_view(['GET'])
 def get_languages(request):
-    # Récupérer les langages des dépôts
-    repositories = cache.get('repositories')  # Assurez-vous que les dépôts sont déjà récupérés et mis en cache
+    
+    repositories = cache.get('repositories')  
     if not repositories:
         return Response({"error": "No repositories found"}, status=status.HTTP_404_NOT_FOUND)
 
-    # Extraire les langages
+   
     languages = set(repo['language'] for repo in repositories)
 
-    # Sérialiser les langages
+    
     serializer = LanguageSerializer([{'language': lang} for lang in languages], many=True)
 
     return Response(serializer.data)

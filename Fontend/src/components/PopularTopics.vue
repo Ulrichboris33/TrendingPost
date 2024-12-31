@@ -10,7 +10,7 @@
       <div class="language-selector">
         <label for="language"> Language:</label>
         <select v-model="selectedLanguage" @change="filterByLanguage">
-          <option value="">All</option>
+          <option value="">Tout</option>
           <option v-for="language in languages" :key="language.id" :value="language.language">
             {{ language.language }}
           </option>
@@ -48,14 +48,14 @@ export default {
   },
   data() {
     return {
-      topics: [],  // Liste des topics
-      languages: [],  // Liste des langages
-      selectedLanguage: '',  // Langage sélectionné
-      searchQuery: '',  // Texte de recherche
+      topics: [],  
+      languages: [],  
+      selectedLanguage: '', 
+      searchQuery: '',  
       currentPage: 1,
       itemsPerPage: 10,
-      loading: false,  // Indicateur de chargement
-      error: null,  // Message d'erreur
+      loading: false, 
+      error: null,  
     };
   },
   created() {
@@ -97,7 +97,7 @@ export default {
       this.error = null;
       try {
         const response = await axios.get('http://127.0.0.1:8000/api/repositories/');
-        console.log(response.data);
+        
         this.topics = response.data;
       } catch (err) {
         this.error = "Impossible de récupérer les topics.";
@@ -111,7 +111,7 @@ export default {
     async fetchLanguages() {
       try {
         const response = await axios.get('http://127.0.0.1:8000/api/languages/');
-        console.log(response.data);
+       
         this.languages = response.data;
       } catch (err) {
         console.error("Error fetching languages", err);
@@ -132,11 +132,11 @@ export default {
       this.currentPage = page;
     },
     filterByLanguage() {
-      // Filtering logic is handled by computed property `filteredTopics`
+     
       this.currentPage = 1; // Reset to first page after filtering
     },
     filterBySearch() {
-      // Le filtrage est géré par la propriété calculée `filteredTopics`
+    
       this.currentPage = 1; // Réinitialiser à la première page après filtrage
     },
   },
@@ -153,11 +153,11 @@ export default {
 .toolbar {
   display: flex;
   justify-content: space-between;
-  /* Positionne les éléments à l'opposé */
+ 
   align-items: center;
-  /* Aligne verticalement les éléments */
+  
   margin-bottom: 20px;
-  /* Espacement en dessous */
+ 
 }
 
 .title {
@@ -166,15 +166,15 @@ export default {
   font-weight: 500;
   margin-bottom: 30px;
   color: #fff;
-  /* Couleur du texte */
+ 
   background-color: #60c2b6;
-  /* Couleur de fond */
+ 
   padding: 15px 20px;
-  /* Rembourrage pour un effet entête */
+  
   border-radius: 8px;
-  /* Coins arrondis */
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Ombre pour donner du relief */
+  
 }
 
 /* Indicateur de chargement */
@@ -220,7 +220,7 @@ export default {
   border: 1px solid #ddd;
 }
 
-/* Barre de recherche */
+
 .search-bar input {
   padding: 10px;
   border-radius: 25px;
